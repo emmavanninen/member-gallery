@@ -1,0 +1,200 @@
+body {
+background-color: rgb(12, 12, 12);
+  color: rgb(199, 199, 199);
+  font-size: 14px;
+  margin: 0;
+}
+
+.navbar {
+    z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 30%) 10%;
+  grid-template-rows: 1;
+  width: 100%;
+  position: fixed;
+background-color: rgb(12, 12, 12);
+}
+
+section {
+    height: 100%;
+    background-color: rgb(12, 12, 12);
+  color: white;
+
+}
+
+.collapse {
+  grid-column: 3 / span 1;
+  grid-row: 1;
+}
+
+.dropdown {
+  border-left: 1px solid rgb(199, 199, 199);
+  grid-column: 4 / span 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+.navbar a {
+  color: rgb(199, 199, 199);
+}
+
+.navbar img {
+  padding-left: 20px;
+  /* padding-top: 3px; */
+  height: 100px;
+}
+
+.mid-header {
+  height: auto;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 10% 80% 10%;
+  color: rgb(199, 199, 199);
+  font-size: 12px;
+  align-self: center;
+}
+
+.carousel-item {
+    margin-top: 120px;
+  height: 60vh;
+}
+
+.carousel-item img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.spotlight {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.parallax2 {
+  background-image: url("../images/_MG_4827.jpg");
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  background-image: url("../images/43880390_2407777222582235_2543525021905584128_o.jpg");
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax4 {
+  background-image: url("../images/paul-green-mln2ExJIkfc-unsplash.jpg");
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+.something {
+  display: flex;
+  flex-direction: column;
+}
+.location {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.collapse {
+  grid-column: 3 / span 1;
+  grid-row: 1;
+}
+
+.dropdown {
+  border-left: 1px solid rgb(199, 199, 199);
+  grid-column: 4 / span 1;
+  grid-row: 1;
+  text-align: center;
+}
+
+.navbar a {
+  color: rgb(199, 199, 199);
+}
+
+.navbar img {
+  padding-left: 20px;
+  /* padding-top: 3px; */
+  height: 100px;
+}
+
+.mid-header {
+  height: auto;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 10% 80% 10%;
+  color: rgb(199, 199, 199);
+  font-size: 12px;
+  align-self: center;
+}
+
+.carousel-item {
+    margin-top: 120px;
+  height: 60vh;
+}
+
+.carousel-item img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.spotlight {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+
+.parallax2 {
+  background-image: url("/images/_MG_4827.jpg");
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  background-image: url("/images/43880390_2407777222582235_2543525021905584128_o.jpg");
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax4 {
+  background-image: url("/images/paul-green-mln2ExJIkfc-unsplash.jpg");
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+}
+.something {
+  display: flex;
+  flex-direction: column;
+}
+.location {
+  display: flex;
+  flex-direction: column;
+}
