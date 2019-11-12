@@ -27,12 +27,12 @@ section {
   grid-row: 1;
 }
 
-.dropdown {
+/* .dropdown {
   border-left: 1px solid rgb(199, 199, 199);
-  grid-column: 4 / span 1;
+  grid-column: 3 / span 1;
   grid-row: 1;
   text-align: center;
-}
+} */
 
 .navbar a {
   color: rgb(199, 199, 199);
@@ -118,7 +118,7 @@ section {
 
 .dropdown {
   border-left: 1px solid rgb(199, 199, 199);
-  grid-column: 4 / span 1;
+  grid-column: 3 / span 1;
   grid-row: 1;
   text-align: center;
 }
