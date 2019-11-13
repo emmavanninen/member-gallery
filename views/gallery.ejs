@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> -->
-    <title>Memeber Gallery</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <link rel="stylesheet" href="/stylesheets/gallery-style.css" />
-    <link rel="stylesheet" href="/stylesheets/resume-style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Member Gallery</title>
+
   </head>
 
   <body>
+        <form class="form-signin" method="GET" action="/users/gallery">
     <section class="simple-top-nav">
       <a class="navbar-brand" href="#"
         ><img src="/images/simple-logo.png" style="height: 30px; padding: 20px;"
       /></a>
     </section>
     <section class="wall">
-      <!-- include resume -->
-      <form class="form-signin" method="GET" action="/users/gallery">
+        <!-- include resume -->
+        
         <div class="gallery">
           <div class="card-deck">
+            <form class="form-signin" method="GET" action="/users/gallery">
+            <% for (let i of members) {%>
             <div class="card">
               <img class="card-img-top" src="#" alt="Card image cap" />
               <div class="card-body">
                 <div class="hs">
-                  <h5 class="card-title">Card Title</h5>
+                  <h5 class="card-title"><%= i.profile.name %></h5>
+                  <a href="/users/resume">resume</a>
                   <!-- emsp = 4 spaces -->
                   <h6 class="card-subtitle mb-2 text-muted">
                     &emsp;Subtitle, Poop
@@ -33,12 +35,15 @@
                 </div>
               </div>
             </div>
+            <% }%>
+            </form>
           </div>
         </div>
-      </form>
+
     </section>
     <div>
       <% include ./partials/scripts %>
     </div>
+        </form>
   </body>
 </html>

@@ -7,13 +7,13 @@ let MemberSchema = new mongoose.Schema({
     profile: {
         name: { type: String, required: true },
         picture: { type: String, default: '' },
+        memberSince: { type: Number, required: true },
+        activeEnsemble: { type: Boolean, required: true },
     },
-    resume: [
+    resume:
         {
-            item: { type: mongoose.Schema.Types.ObjectId, ref: 'resume' },
-            memberSince: { type: Number, default: '' }
+         type: mongoose.Schema.Types.ObjectId, ref: 'Resume'
         }
-    ]
 })
 
 module.exports = mongoose.model('Member', MemberSchema)

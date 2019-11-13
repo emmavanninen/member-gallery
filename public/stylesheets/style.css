@@ -23,7 +23,7 @@ section {
 }
 
 .collapse {
-  grid-column: 3 / span 1;
+  grid-column: 2 / span 1;
   grid-row: 1;
 }
 
@@ -37,6 +37,7 @@ section {
 .navbar a {
   color: rgb(199, 199, 199);
 }
+
 
 .navbar img {
   padding-left: 20px;
@@ -110,11 +111,6 @@ section {
   flex-direction: column;
 }
 
-
-.collapse {
-  grid-column: 3 / span 1;
-  grid-row: 1;
-}
 
 .dropdown {
   border-left: 1px solid rgb(199, 199, 199);

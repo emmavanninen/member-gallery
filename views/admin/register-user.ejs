@@ -37,13 +37,20 @@
         <input type="text" id="inputEmail" class="form-control" placeholder="Email address" name="email">
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="text" id="inputPassword" class="form-control" placeholder="Password" name="password">
-
+        <select name="memberYear" class="form-control" id="dropdownYear">
+        </select>
+            <label class="switch-btn">
+                <input class="switch" type="checkbox" name="active"> Active Ensemble
+                <!-- <span class="slider round"></span> -->
+            </label>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
         <a href="/" style="text-decoration: none;"><button class="btn btn-lg btn-primary btn-block" type="button">Back to main</button></a>
         <p class="mt-5 mb-3 text-muted">&copy; 2019</p>
     </form>
     <% include ../partials/scripts %>
+    <script></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </body>
 
 </html>

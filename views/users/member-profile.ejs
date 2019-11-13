@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+
+    <div class="container emp-profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="#" alt="">
+
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="false">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="true">Edit Profile</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+<% for (let err of errors) { %>
+<div class="alert alert-danger">
+    <%= err %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+</div>
+<% } %>
+
+<% for (let s of success) { %>
+<div class="alert alert-success">
+    <%= s %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+</div>
+<% } %>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-6">
+                                <%= user.profile.name %>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-6">
+                                <%= user.email %>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Member sinc</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>Clothes and Whatever</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<form class="form-signin" method="POST" action="/api/users/edit-profile?_method=PUT">
+    <% for (let err of errors) { %>
+    <div class="alert alert-danger">
+        <%= err %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+    </div>
+    <% } %>
+    <% for (let s of success) { %>
+    <div class="alert alert-success">
+        <%= s %>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+    </div>
+    <% } %>
+    <div class="resume">
+        <div class="block block1">
+            <div class="name-title form-group">
+                <div>
+                    Name:<input type="text" class="form-control" id="name" placeholder="Full Name" />
+                </div>
+                <div>
+                    Title:<input type="text" class="form-control" id="title" placeholder="Work Title" />
+                </div>
+            </div>
+            <div class="personal-info form-group">
+                <div>
+                    <div>
+                        Email:<input type="email" class="form-control form-control-sm" id="email"
+                            aria-describedby="email" placeholder="Email" />
+                    </div>
+                </div>
+                <div>
+                    Phone:<input type="tel" class="form-control" id="phonenumber" placeholder="Phone number" />
+                </div>
+                <div>
+                    www:<input type="url" class="form-control" id="web" placeholder="Website" />
+                </div>
+                <br />
+                <div>
+                    Gender:<input type="text" class="form-control" id="gender" placeholder="Gender" />
+                </div>
+                <div>
+                    Height:<input type="text" class="form-control" id="height" placeholder="Height" />
+                </div>
+                <div>
+                    Weight:<input type="text" class="form-control" id="weight" placeholder="Weight" />
+                </div>
+                <div>
+                    Hair:<input type="text" class="form-control" id="hair" placeholder="Hair" />
+                </div>
+                <div>
+                    Eyes:<input type="text" class="form-control" id="eyes" placeholder="Eyes" />
+                </div>
+                <div>
+                    Vocal:<input type="text" class="form-control" id="vocal" placeholder="Vocal range" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block block2">
+        <div class="edu-train-skill form-group">
+            <div class="education">
+                <h3>Education</h3>
+
+                <div>
+                    <input type="text" class="form-control" id="school" placeholder="School" />
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <button onclick="console.log('poop')" id="add-more" name="add-more" class="btn btn-primary">
+                            Add More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="training">
+                <h3>Training</h3>
+                <div>
+                    <input type="text" class="form-control" id="school" placeholder="Training" />
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <button onclick="console.log('poop')" id="add-more" name="add-more" class="btn btn-primary">
+                            Add More
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <div>
+                    <input type="text" class="form-control" id="school" placeholder="Skill" />
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <button onclick="console.log('poop')" id="add-more" name="add-more" class="btn btn-primary">
+                            Add More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block block3">
+        <div class="block3-top">
+            <div class="form-group">
+                <label for="headshot">Headshot</label>
+                <input type="file" class="form-control-file" id="headshot" />
+            </div>
+        </div>
+        <div class="work-experience">
+            <div class="theatre-exp">
+                <h3>Theatre</h3>
+                <div>
+                    Play:<input type="text" class="form-control" id="playname" placeholder="Play/Production" />
+                </div>
+                <div>
+                    Role:<input type="text" class="form-control" id="role" placeholder="Role or title" />
+                </div>
+                <div>
+                    About:<textarea class="form-control" id="aboutplay" rows="3"
+                        placeholder="About the production"></textarea>
+                </div>
+            </div>
+            <div class="film-exp">
+                <h3>Television and film</h3>
+                <div>
+                    Name:<input type="text" class="form-control" id="playname" placeholder="Play/Production" />
+                </div>
+                <div>
+                    Role:<input type="text" class="form-control" id="role" placeholder="Role" />
+                </div>
+                <div>
+                    About:<textarea class="form-control" id="aboutplay" rows="3"
+                        placeholder="About the production"></textarea>
+                </div>
+            </div>
+            <div class="commercial-exp">
+                <h3>Commercial</h3>
+                <div>
+                    Name:<input type="text" class="form-control" id="playname" placeholder="Play/Production" />
+                </div>
+                <div>
+                    Role:<input type="text" class="form-control" id="role" placeholder="Role" />
+                </div>
+                <div>
+                    About:<textarea class="form-control" id="aboutplay" rows="3"
+                        placeholder="About the production"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+   
+    <script src="./main.js"></script>
+
+<% include ../partials/scripts %>
+</body>
+
+</html>

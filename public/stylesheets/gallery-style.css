@@ -1,56 +1,46 @@
-:root {
-  background-color: rgb(20, 17, 17);
-}
 
-body {
+.wall {
     position: fixed;
-}
-
-.wall{
-display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 1;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
 }
 
 .gallery {
-    width: 100%;
-        grid-column: 1;
-    grid-row: 1;
-    height: 100vh;
-    padding-bottom: 10px;
-    background: url(/images/tim-mossholder-kg_sd8IOLlY-unsplash.jpg);
-    background-size: 100%;
-    overflow: auto;
-    scroll-behavior: smooth;
-
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  height: 100vh;
+  padding-bottom: 10px;
+  background: url(/images/tim-mossholder-kg_sd8IOLlY-unsplash.jpg);
+  background-size: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 
 .resume {
-        display: none;
-    z-index: 1;
-    margin-top: 3px;
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: center;
-
+  /* display: none; */
+  z-index: 1;
+  margin-top: 3px;
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: center;
 }
 
 .card-deck {
-    grid-column: 1;
-    grid-row: 1;
-    padding-top: 15px;
-        margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    scroll-behavior: smooth;
-    justify-content: space-around;
+  padding-top: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  scroll-behavior: smooth;
+  justify-content: space-around;
 }
 
 .card {
-    
-    margin: 30px;
+  margin: 30px;
   background-color: rgba(27, 21, 21, 0.829);
   width: 150px;
   border: 1px solid rgba(92, 92, 92, 0.37);
@@ -59,8 +49,8 @@ display: grid;
 }
 
 .card:hover {
-    background-color: rgba(46, 36, 36, 0.829);
-    border: 1px solid rgba(94, 94, 94, 0.329);
+  background-color: rgba(46, 36, 36, 0.829);
+  border: 1px solid rgba(94, 94, 94, 0.329);
 }
 
 .card-img-top {
