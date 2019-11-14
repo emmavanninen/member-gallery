@@ -1,16 +1,16 @@
 <div class="resume">
         <div class="block block1">
             <div class="name-title">
-                <h1></h1>
+                <h1><%= resume.bio.name %></h1>
                 <h2></h2>
             </div>
             <div class="personal-info">
                 <ul>
-                    <li>Email: <p id="email"></p>
+                    <li>Email: <p id="email"><%= resume.bio.email %></p>
                     </li>
-                    <li>Phone: <p id="tel"></p>
+                    <li>Phone: <p id="tel"><%= resume.bio.phone %></p>
                     </li>
-                    <li>www: <p id="web"><a href="#"></p></a></li>
+                    <li>www: <p id="web"><a href="#"><%= resume.bio.web %></p></a></li>
                     <br>
                     <li>Gender: <p id="gender"></p>
                     </li>

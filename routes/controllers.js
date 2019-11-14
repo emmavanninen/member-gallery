@@ -1,5 +1,6 @@
 const Member = require("./models/Member");
 const Resume = require("./models/Resume");
+const resumeController = require("./resumeController");
 const hasher = require("./utils/hasher");
 
 module.exports = {
@@ -18,15 +19,17 @@ module.exports = {
           newMember.profile.name = req.body.name;
           newMember.email = req.body.email;
           newMember.profile.memberSince = req.body.memberYear;
-            if (req.body.active === undefined){
-                newMember.profile.activeEnsemble = false
-            } else if (req.body.active === 'on'){
-                newMember.profile.activeEnsemble = true
-            } else throw error
+          if (req.body.active === undefined) {
+            newMember.profile.activeEnsemble = false;
+          } else if (req.body.active === "on") {
+            newMember.profile.activeEnsemble = true;
+          } else throw error;
           console.log(newMember);
 
           newResume = Resume();
           newResume.userID = newMember._id;
+          newResume.bio.name = newMember.profile.name;
+          newResume.bio.email = newMember.email;
 
           //! Callback insted of a promise
           newResume.save(error => {
@@ -43,6 +46,7 @@ module.exports = {
                   newMember.password = hash;
                   newMember.save(error => {
                     if (error) {
+                      //TODO: delete earlier if error
                       newResume.delete();
                       throw error;
                     } else {
@@ -63,44 +67,14 @@ module.exports = {
       });
   },
 
-  editResume: (params, id) => {
-    return new Promise((resolve, reject) => {
-      User.findById(id).then(user => {
-        if (params.name !== "") user.profile.name = params.name;
-        if (params.address !== "") user.address = params.address;
-        if (params.email !== "") user.email = params.email;
-
-        user
-          .save()
-          .then(user => {
-            resolve(user);
-          })
-          .catch(err => {
-            reject(err);
-          });
-      });
-    });
-  },
-
-  getAllMembers: (req, res) => {
+  getAllMembers: (req, res, next) => {
     Member.find({})
       .then(members => {
-        res.render("gallery", {
-          members: members
-        });
+        res.render("gallery", {members: members});
       })
       .catch(error => {
         req.flash("errors", error);
       });
   },
 
-  getResume: (req, res) => {
-    Member.findById(res.user)
-      .then(resume => {
-        res.render("partials/resume", { resume: resume });
-      })
-      .catch(err => {
-        throw err;
-      });
-  }
-};
+  };

@@ -3,7 +3,7 @@ let mongoose = require('mongoose')
 let ResumeSchema = new mongoose.Schema({
     userID: { type: String, required: true },
     bio: {
-        name: { type: String, required: false },
+        name: { type: String, required: true },
         title: { type: String, required: false },
         email: { type: String, required: false },
         phone: { type: Number, required: false },

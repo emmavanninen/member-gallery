@@ -20,7 +20,7 @@
 }
 
 .resume {
-  /* display: none; */
+  display: none;
   z-index: 1;
   margin-top: 3px;
   grid-column: 1;
