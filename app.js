@@ -7,6 +7,7 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const createError = require("http-errors");
 const cookieParser = require("cookie-parser");
+const methodOverride = require("method-override");
 const expressValidator = require("express-validator");
 
 let MongoStore = require("connect-mongo")(session);
@@ -38,6 +39,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use(methodOverride("_method"));
 
 app.use(
   session({

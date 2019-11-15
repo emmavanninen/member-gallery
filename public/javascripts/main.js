@@ -32,9 +32,9 @@ $("#close").click(() => {
   );
 });
 
-$(".card").click(() => {
-  $(".resume").toggle("slow");
-});
+// $(".card").click(() => {
+//   $(".resume").toggle("slow");
+// });
 
 //TODO: change earliest year
 $("#dropdownYear").each(function() {
@@ -65,3 +65,29 @@ $(".switch").ready(() => {
     $(this).attr("value", "false");
   }
 });
+
+
+// $('.card').click(() => {
+//     console.log('we hitting it', $(this))
+
+//     $.ajax(
+//         {
+//             method: 'GET',
+//             url: '/users/gallery',
+//             data: {
+//                 id: 
+//             },
+//             dataType: 'json',
+//             success: (result) => {
+//                 console.log(result);
+                
+//             }
+//         })
+//     })
+
+// $(".edit-profile-error").ready(() => {
+//   if (errors) {
+//     console.log(errors);
+//     $("#nav-profile-tab").trigger("click");
+//   }
+// });

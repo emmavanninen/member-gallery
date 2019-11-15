@@ -1,0 +1,16 @@
+body {
+background-color: rgb(5, 4, 4);
+  color: rgb(199, 199, 199);
+  font-size: 14px;
+  margin: 0;
+}
+
+.navbar {
+    z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 30%) 10%;
+  grid-template-rows: 1;
+  width: 100%;
+  position: fixed;
+background-color: rgb(12, 12, 12);
+}

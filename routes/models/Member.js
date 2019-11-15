@@ -7,7 +7,7 @@ let MemberSchema = new mongoose.Schema({
     profile: {
         name: { type: String, required: true },
         picture: { type: String, default: '' },
-        memberSince: { type: String, required: true },
+        memberSince: { type: Number, required: true },
         activeEnsemble: { type: Boolean, required: true },
     },
     resume:
