@@ -159,11 +159,11 @@ h6 {
   src: url("../fonts/LABTSEC_.ttf") format("truetype");
 }
 
-.card-columns {
+/* .card-columns {
   @include media-breakpoint-only(lg) {
     column-count: 4;
   }
-}
+} */
 
 /* .card-columns {
   @include media-breakpoint-only(lg) {
