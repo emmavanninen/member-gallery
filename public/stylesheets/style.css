@@ -14,7 +14,7 @@ p {
 .navbar {
   z-index: 50;
   display: grid;
-  grid-template-columns: repeat(3, 30%) 10%;
+  grid-template-columns: repeat(2, 25%) 30% 20%;
   grid-template-rows: 1;
   width: 100%;
   height: 100px;
@@ -67,7 +67,7 @@ section {
 }
 
 .collapse {
-  grid-column: 2 / span 1;
+  grid-column: 3 / span 1;
   grid-row: 1;
 }
 
@@ -162,10 +162,6 @@ p a {
   align-items: center;
 }
 
-.form-signin {
-  padding-top: 20px;
-  width: 50vw;
-}
 
 .form-signin input {
   margin-bottom: 10px;
@@ -237,6 +233,15 @@ p a:hover {
   grid-column: 4;
   grid-row: 2;
 }
+
+.emp-profile {
+    margin-top: 20px;
+}
+
+#nav-tab{
+    color: ;
+}
+
 
 @font-face {
   font-family: "quarca";

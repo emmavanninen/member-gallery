@@ -1,6 +1,6 @@
 const Member = require("../routes/models/Member");
 const Resume = require("../routes/models/Resume");
-// const resumeController = require("./resumeController");
+const resumeController = require("./resumeController");
 const hasher = require("../routes/utils/hasher");
 
 module.exports = {
@@ -52,7 +52,7 @@ module.exports = {
         const updates = Object.keys(req.body);
 
         updates.forEach(update => {
-console.log(update);
+        console.log(update);
 
             // note[update] = req.body[update];
         });

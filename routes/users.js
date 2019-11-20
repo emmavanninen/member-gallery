@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
-const controllers = require('./controllers');
 const Member = require("./models/Member");
 const Resume = require("./models/Resume");
-const resumeController = require("./resumeController");
+const controllers = require('../controllers/controllers');
 const userController = require("../controllers/user-controller");
+const resumeController = require("../controllers/resumeController");
 
 router.get("/", function(req, res, next) {
   res.send("users main page");
