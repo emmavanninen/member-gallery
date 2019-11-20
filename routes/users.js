@@ -3,6 +3,7 @@ const router = express.Router();
 const passport = require("passport");
 const controllers = require('./controllers');
 const Member = require("./models/Member");
+const Resume = require("./models/Resume");
 const resumeController = require("./resumeController");
 const userController = require("../controllers/user-controller");
 
@@ -29,7 +30,11 @@ router.post("/login", passport.authenticate("local-login", {
 
 router.get("/member-profile", (req, res) => {
     if(!req.isAuthenticated()) res.redirect('/')
-  res.render("users/member-profile");
+
+    Resume.findOne({userID: req.user.id}, (err, resume) =>{
+      if (err) throw err;
+    res.render("users/member-profile", {resume: resume});
+    });
 });
 
 router.put("/member-profile/profile", userController.editProfile)

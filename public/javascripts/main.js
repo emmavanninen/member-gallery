@@ -67,6 +67,9 @@ $(".switch").ready(() => {
 });
 
 
+
+
+
 // $('.card').click(() => {
 //     console.log('we hitting it', $(this))
 
@@ -91,3 +94,25 @@ $(".switch").ready(() => {
 //     $("#nav-profile-tab").trigger("click");
 //   }
 // });
+
+
+$("#add-school").click(() => {
+  event.preventDefault();
+  $(".addschoolform").append(
+    '<input type="text" class="form-control" id="school" placeholder="School" />'
+  );
+});
+
+$("#add-training").click(() => {
+  event.preventDefault();
+  $(".addtrainingform").append(
+    '<input type="text" class="form-control" id="school" placeholder="Training" />'
+  );
+});
+
+$("#add-skill").click(() => {
+  event.preventDefault();
+  $(".addskillsform").append(
+    '<input type="text" class="form-control" id="school" placeholder="Skill" />'
+  );
+});

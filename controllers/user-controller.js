@@ -46,13 +46,16 @@ module.exports = {
 
   editResume: (req, res) => {
     Resume.findOne({ userID: req.user.id }, (err, resume) => {
-        console.log(resume);
-        console.log(req.body);
         
         if (err) throw err;
         
-        if (req.body.name !== "") resume.bio.name = req.body.name;
-        if (req.body.email !== "") resume.bio.email = req.body.email;
+        const updates = Object.keys(req.body);
+
+        updates.forEach(update => {
+console.log(update);
+
+            // note[update] = req.body[update];
+        });
 
         resume.save(err => {
           if (err) throw err;

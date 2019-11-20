@@ -1,13 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const controllers = require('./controllers');
+
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    console.log(res.locals);
-    
-  res.render('index', { title: 'Playhouse' });
-});
+router.get('/', controllers.getMainPageMembers);
 
 
 

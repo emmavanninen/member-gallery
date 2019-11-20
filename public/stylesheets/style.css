@@ -1,25 +1,69 @@
 body {
-background-color: rgb(12, 12, 12);
+  background-color: rgb(8, 4, 3);
   color: rgb(199, 199, 199);
-  font-size: 14px;
+  font-size: 25px;
   margin: 0;
+  font-family: "labtsec";
+}
+
+p {
+  font-family: "quarca";
+  font-size: 20px;
 }
 
 .navbar {
-    z-index: 2;
+  z-index: 50;
   display: grid;
   grid-template-columns: repeat(3, 30%) 10%;
   grid-template-rows: 1;
   width: 100%;
+  height: 100px;
   position: fixed;
-background-color: rgb(12, 12, 12);
+  background-color: rgba(8, 4, 3, 0.507);
+}
+
+.logindrop {
+  grid-column: 4;
+  border-left: 0.5px solid white;
+}
+
+.member-logged-in {
+  padding-top: 0;
+  font-size: 20px;
+}
+
+.dropdown-menu {
+  margin-left: -50px;
+  padding: 5px;
+  background: rgba(122, 122, 122, 0.158);
+}
+
+.form-control {
+  background-color: rgba(247, 247, 247, 0.822);
+}
+
+.btn-primary {
+  background-color: rgb(39, 27, 24);
+  border-color: white;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: rgb(39, 27, 24);
+  border-color: white;
+  color: rgb(168, 168, 168);
+}
+
+.btn-primary:active {
+  background-color: rgb(39, 27, 24);
+  border-color: white;
+  color: white;
 }
 
 section {
-    height: 100%;
-    background-color: rgb(12, 12, 12);
+  height: auto;
+  background-color: rgb(8, 4, 3);
   color: white;
-
 }
 
 .collapse {
@@ -27,37 +71,23 @@ section {
   grid-row: 1;
 }
 
-/* .dropdown {
-  border-left: 1px solid rgb(199, 199, 199);
-  grid-column: 3 / span 1;
-  grid-row: 1;
-  text-align: center;
-} */
-
 .navbar a {
   color: rgb(199, 199, 199);
 }
 
-
-.navbar img {
+.navbar-brand img {
   padding-left: 20px;
-  /* padding-top: 3px; */
+  padding-top: 5px;
   height: 100px;
 }
 
-.mid-header {
-  height: auto;
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 10% 80% 10%;
-  color: rgb(199, 199, 199);
-  font-size: 12px;
-  align-self: center;
+.nav-item a:hover {
+  color: rgb(134, 134, 134);
 }
 
 .carousel-item {
-    margin-top: 120px;
-  height: 60vh;
+  margin-top: 5px;
+  height: 100vh;
 }
 
 .carousel-item img {
@@ -66,97 +96,32 @@ section {
   object-fit: cover;
 }
 
-.spotlight {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-}
-
-.parallax2 {
-  background-image: url("../images/_MG_4827.jpg");
-  height: 70vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax3 {
-  background-image: url("../images/43880390_2407777222582235_2543525021905584128_o.jpg");
-  height: 70vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax4 {
-  background-image: url("../images/paul-green-mln2ExJIkfc-unsplash.jpg");
-  height: 70vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.about {
-  display: flex;
-  flex-direction: row;
-}
-.something {
-  display: flex;
-  flex-direction: column;
-}
-.location {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.dropdown {
-  border-left: 1px solid rgb(199, 199, 199);
-  grid-column: 3 / span 1;
-  grid-row: 1;
-  text-align: center;
-}
-
-.navbar a {
-  color: rgb(199, 199, 199);
-}
-
-.navbar img {
-  padding-left: 20px;
-  /* padding-top: 3px; */
-  height: 100px;
-}
-
-.mid-header {
-  height: auto;
+.between-parallax {
   display: grid;
-  grid-template-columns: 20% 60% 20%;
-  grid-template-rows: 10% 80% 10%;
-  color: rgb(199, 199, 199);
-  font-size: 12px;
-  align-self: center;
+  grid-template-columns: 5% 20% 50% 20% 5%;
+  grid-template-rows: 20% 40% 40%;
+}
+.between-parallax h1 {
+  padding-top: 10px;
+  grid-column: 2 / span 3;
+  grid-row: 1;
+}
+.between-parallax p {
+  padding-top: 20px;
+  grid-column: 3 / span 2;
+  grid-row: 2 / span 2;
+}
+.between-parallax a {
+  grid-column: 4;
+  grid-row: 3;
 }
 
-.carousel-item {
-    margin-top: 120px;
-  height: 60vh;
-}
-
-.carousel-item img {
-  max-height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.spotlight {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
+p a {
+  color: brown;
 }
 
 .parallax2 {
-  background-image: url("/images/_MG_4827.jpg");
+  background-image: url("/images/DSC2863.jpg");
   height: 70vh;
   background-attachment: fixed;
   background-position: center;
@@ -173,6 +138,15 @@ section {
   background-size: cover;
 }
 
+.parallax5 {
+  background-image: url("/images/img1.jpg");
+  height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .parallax4 {
   background-image: url("/images/paul-green-mln2ExJIkfc-unsplash.jpg");
   height: 70vh;
@@ -182,15 +156,93 @@ section {
   background-size: cover;
 }
 
-.about {
+.formbody {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.something {
-  display: flex;
-  flex-direction: column;
+
+.form-signin {
+  padding-top: 20px;
+  width: 50vw;
 }
-.location {
-  display: flex;
-  flex-direction: column;
+
+.form-signin input {
+  margin-bottom: 10px;
+}
+
+.between-parallax-members {
+  display: grid;
+  grid-template-columns: 10% repeat(3, 30%);
+  grid-template-rows: 10% 85% 5%;
+}
+
+.between-parallax-members h1 {
+  padding-top: 10px;
+  padding-left: 10px;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.between-parallax-members p {
+  margin-top: -20px;
+  align-self: right;
+  grid-column: 4 / span 1;
+  grid-row: 3;
+}
+
+p a:hover {
+  text-decoration: none;
+  color: rgb(94, 94, 94);
+}
+
+.card0 {
+  grid-column: 2 / span 1;
+  grid-row: 2;
+}
+.card1 {
+  grid-column: 3 / span 1;
+  grid-row: 2;
+}
+.card2 {
+  grid-column: 4 / span 1;
+  grid-row: 2;
+}
+
+.card {
+  /* text-align: center; */
+  height: 300px;
+  /* width: 300px; */
+}
+
+.location-contact-info {
+  display: grid;
+  grid-template-columns: 20% repeat(4, 20%);
+  grid-template-rows: 20% 75% 5%;
+}
+
+.location-contact-info h1 {
+  padding-top: 10px;
+  padding-left: 10px;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+#map-container-google-2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.address {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+@font-face {
+  font-family: "quarca";
+  src: url("../fonts/QuarcaCondLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "labtsec";
+  src: url("../fonts/LABTSEC_.ttf") format("truetype");
 }

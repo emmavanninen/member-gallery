@@ -77,4 +77,17 @@ module.exports = {
       });
   },
 
+    getMainPageMembers: (req, res, next) => {
+        Member.find({})
+            .then(members => {
+                res.render("index", { members: members });
+            })
+            .catch(error => {
+                req.flash("errors", error);
+            });
+    },
+
+  
+  
+
   };

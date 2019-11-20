@@ -17,7 +17,6 @@
     
     
     <% if(user){ %>
-
     <div class="container emp-profile">
         <div class="row">
                 <% for (let s of success) { %>
@@ -135,40 +134,40 @@
                                 <div class="block block1">
                                     <div class="name-title form-group">
                                         <div>
-                                            Name:<input type="text" class="form-control" id="name" placeholder="Full Name" name="name" />
+                                            Name:<input type="text" class="form-control" id="name" placeholder="Full Name" value="<%= resume.bio.name %>" name="name" />
                                         </div>
                                         <div>
-                                            Title:<input type="text" class="form-control" id="title" placeholder="Work Title" name="title"/>
+                                            Title:<input type="text" class="form-control" id="title" placeholder="Work Title" value="<%= resume.bio.title %>" name="title"/>
                                         </div>
                                     </div>
                                     <div class="personal-info form-group">
                                         <div>
                                             <div>
                                                 Email:<input type="email" class="form-control form-control-sm" id="email"
-                                                    aria-describedby="email" placeholder="Email" name="email" />
+                                                    aria-describedby="email" placeholder="Email" value="<%= resume.bio.email %>" name="email" />
                                             </div>
                                         </div>
                                         <div>
-                                            Phone:<input type="tel" class="form-control" id="phonenumber" placeholder="Phone number" />
+                                            Phone:<input type="tel" class="form-control" id="phonenumber" placeholder="Phone number" value="<%= resume.bio.phone %>" name="phone" />
                                         </div>
                                         <div>
-                                            www:<input type="url" class="form-control" id="web" placeholder="Website" />
+                                            www:<input type="url" class="form-control" id="web" placeholder="Website" value="<%= resume.bio.web %>" name="web" />
                                         </div>
                                         <br />
                                         <div>
-                                            Gender:<input type="text" class="form-control" id="gender" placeholder="Gender" />
+                                            Gender:<input type="text" class="form-control" id="gender" placeholder="Gender" value="<%= resume.bio.gender %>" name="gender"/>
                                         </div>
                                         <div>
-                                            Height:<input type="text" class="form-control" id="height" placeholder="Height" />
+                                            Height:<input type="text" class="form-control" id="height" placeholder="Height" value="<%= resume.bio.height %>" name="height" />
                                         </div>
                                         <div>
-                                            Weight:<input type="text" class="form-control" id="weight" placeholder="Weight" />
+                                            Weight:<input type="text" class="form-control" id="weight" placeholder="Weight" value="<%= resume.bio.weight %>" name="weight" />
                                         </div>
                                         <div>
-                                            Hair:<input type="text" class="form-control" id="hair" placeholder="Hair" />
+                                            Hair:<input type="text" class="form-control" id="hair" placeholder="Hair" value="<%= resume.bio.hair %>" name="hair" />
                                         </div>
                                         <div>
-                                            Eyes:<input type="text" class="form-control" id="eyes" placeholder="Eyes" />
+                                            Eyes:<input type="text" class="form-control" id="eyes" placeholder="Eyes" value="<%= resume.bio.eyes %>" name="eyes" />
                                         </div>
                                         <div>
                                             Vocal:<select class="form-control" id="vocal-range" name="vocal">
@@ -183,32 +182,33 @@
                                     </div>
                                 </div>
                             </div>
-
+                            
                             <div class="block block2">
                                 <div class="edu-train-skill form-group">
                                     <div class="education">
                                         <h3>Education</h3>
-
-                                        <div>
-                                            <input type="text" class="form-control" id="school" placeholder="School" />
+                                      
+                                        <div class="addschoolform">
+                                            <input type="text" class="form-control" id="school" placeholder="School" value="" />
                                         </div>
-                                        <div class="form-group">
-                                            <div class="col-md-4">
-                                                <button onclick="console.log('poop')" id="add-more" name="add-more" class="btn btn-primary">
-                                                    Add More
-                                                </button>
+                                    
+                                            <div class="form-group">
+                                                <div class="col-md-4">
+                                                    <button id="add-school" name="add-more" class="btn btn-primary">
+                                                        Add More
+                                                    </button>
+                                                </div>
                                             </div>
-                                        </div>
                                     </div>
 
                                     <div class="training">
                                         <h3>Training</h3>
-                                        <div>
-                                            <input type="text" class="form-control" id="school" placeholder="Training" />
+                                        <div class="addtrainingform">
+                                            <input type="text" class="form-control" id="training" placeholder="Training" />
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-4">
-                                                <button onclick="console.log('poop')" id="add-more" name="add-more" class="btn btn-primary">
+                                                <button id="add-training" name="add-more" class="btn btn-primary">
                                                     Add More
                                                 </button>
                                             </div>
@@ -216,12 +216,12 @@
                                     </div>
                                     <div class="skills">
                                         <h3>Skills</h3>
-                                        <div>
-                                            <input type="text" class="form-control" id="school" placeholder="Skill" />
+                                        <div class="addskillsform">
+                                            <input type="text" class="form-control" id="skills" placeholder="Skill" />
                                         </div>
                                         <div class="form-group">
                                             <div class="col-md-4">
-                                                <button onclick="console.log('poop')" id="add-more" name="add-more" class="btn btn-primary">
+                                                <button id="add-skill" name="add-more" class="btn btn-primary">
                                                     Add More
                                                 </button>
                                             </div>
@@ -295,7 +295,7 @@
     <!-- <script src="./main.js"></script> -->
 
 <% include ../partials/scripts %>
-
+<link rel="stylesheet" href="/stylesheets/style.css" />
 </body>
 
 </html>
