@@ -2,7 +2,7 @@
         <div class="block block1">
             <div class="name-title">
                 <h1><%= resume.bio.name %></h1>
-                <h2></h2>
+                <h2><%= resume.bio.title %></h2>
             </div>
             <div class="personal-info">
                 <ul>
@@ -12,17 +12,17 @@
                     </li>
                     <li>www: <p id="web"><a href="#"><%= resume.bio.web %></p></a></li>
                     <br>
-                    <li>Gender: <p id="gender"></p>
+                    <li>Gender: <p id="gender"><%= resume.bio.gender %></p>
                     </li>
-                    <li>Height: <p id="height"></p>
+                    <li>Height: <p id="height"><%= resume.bio.height %>cm</p>
                     </li>
-                    <li>Weight: <p id="weight"></p>
+                    <li>Weight: <p id="weight"><%= resume.bio.weight %>kg</p>
                     </li>
-                    <li>Hair: <p id="hair"></p>
+                    <li>Hair: <p id="hair"><%= resume.bio.hair %></p>
                     </li>
-                    <li>Eyes: <p id="eyes"></p>
+                    <li>Eyes: <p id="eyes"><%= resume.bio.eyes %></p>
                     </li>
-                    <li>Vocal: <p id="vocal-range"></p>
+                    <li>Vocal: <p id="vocal-range"><%= resume.bio.vocal %></p>
                     </li>
                 </ul>
             </div>

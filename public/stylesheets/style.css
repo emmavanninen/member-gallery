@@ -77,8 +77,7 @@ section {
 
 .navbar-brand img {
   padding-left: 20px;
-  padding-top: 5px;
-  height: 100px;
+  height: 85px;
 }
 
 .nav-item a:hover {
@@ -169,7 +168,7 @@ p a {
 
 .between-parallax-members {
   display: grid;
-  grid-template-columns: 10% repeat(3, 30%);
+  grid-template-columns: 20% repeat(3, 26.5%);
   grid-template-rows: 10% 85% 5%;
 }
 
@@ -238,6 +237,10 @@ p a:hover {
     margin-top: 20px;
 }
 
+
+#S3 {
+    height: 400px;
+}
 
 
 @font-face {

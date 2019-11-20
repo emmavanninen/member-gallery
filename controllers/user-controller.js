@@ -12,6 +12,7 @@ module.exports = {
     ) {
       if (req.body.password !== req.body.password_2)
         req.flash("errors", "Passwords do not match");
+        
 
       hasher.compare(req.body.oldPassword, req.user.password);
       if (!result) req.flash("errors", "Old password not correct");
@@ -48,14 +49,9 @@ module.exports = {
     Resume.findOne({ userID: req.user.id }, (err, resume) => {
         
         if (err) throw err;
+        // console.log(req.body);
         
-        const updates = Object.keys(req.body);
-
-        updates.forEach(update => {
-        console.log(update);
-
-            // note[update] = req.body[update];
-        });
+        resume.bio = req.body 
 
         resume.save(err => {
           if (err) throw err;
